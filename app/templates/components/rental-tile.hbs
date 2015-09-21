@@ -1,0 +1,9 @@
+<li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  {{#if isImageShowing}}
+    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Image</button>
+  {{/if}}
+  {{update-rental rental=rental update2="update3"}}
+  <button {{action 'delete' rental}}>Delete</button>
+</li>
