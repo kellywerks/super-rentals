@@ -12,11 +12,10 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    update4(rental, params) {
+    update(rental, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           rental.set(key,params[key]);
-          rental.save()
         }
       });
       rental.save();

@@ -6,21 +6,16 @@ export default Ember.Component.extend({
     updateRentalForm() {
       this.set('updateRentalForm', true);
     },
-    update1(rental) {
-      if (this.get('owner') === '') {
-        var owner = rental.get('owner');
-      } else {
-        var owner = this.get('owner');
-      }
+    update(rental) {
       var params = {
-        owner: owner,
+        owner: this.get('owner'),
         city: this.get('city'),
         type: this.get('type'),
         image: this.get('image'),
         bedrooms: this.get('bedrooms'),
       };
-      this.set('updateRentalForm', false),
-      this.sendAction('update2', rental, params);
+      this.set('updateRentalForm', false);
+      this.sendAction('update', rental, params);
     }
   }
 });
