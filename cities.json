@@ -1,0 +1,14 @@
+{ "cities": [{
+    "name": "Portland",
+    "country": "USA",
+    "attractions": ["Powell's","Bridges","Trees"]
+  }, {
+    "name": "Seattle",
+    "country": "USA",
+    "attractions": ["Needle","Pike's","Puget Sound"]
+  }, {
+    "name": "Barcelona",
+    "country": "Spain",
+    "attractions": ["Gaudi","Cathedrals","Arc de Triomf"]
+  }]
+}
