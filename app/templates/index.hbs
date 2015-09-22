@@ -4,13 +4,26 @@
 
 We hope you find exactly what you're looking for in a place to stay.
 
+<h2> Available Rentals </h2>
 <ul>
-  {{#each model as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 
 {{new-rental save2="save3"}}
+
+<h2> Cities </h2>
+
+<ul>
+  {{#each model.cities as |city|}}
+    <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{new-city saveCity=saveCity}}
+
+<hr>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
