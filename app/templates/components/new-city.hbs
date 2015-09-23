@@ -1,4 +1,4 @@
-{{#if addNewCity}}
+{{#if addCityForm}}
   <h1>New City</h1>
     <div>
       <form>
@@ -21,5 +21,5 @@
       </form>
     </div>
 {{else}}
-    <button {{action 'addCityForm'}}>New City</button>
+    <button {{action 'showCityForm'}}>New City</button>
 {{/if}}

@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addCityForm: true,
+  addCityForm: false,
   actions: {
-    cityFormShow() {
-      this.set('addNewCity', true);
+    showCityForm() {
+      this.set('addCityForm', true);
     },
 
     saveCity() {
