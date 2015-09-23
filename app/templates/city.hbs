@@ -1,5 +1,5 @@
-<h1> Welcome to {{model.city.name}} </h1>
+<h1> Welcome to {{model.name}} </h1>
 
-{{city-tile city=model.city rentals=model.rentals saveRental="saveRental" destroyCity="destroyCity"}}
+{{city-tile city=model saveRental="saveRental" destroyCity="destroyCity"}}
 
-{{new-rental saveRental="saveRental" city=model.city}}
+{{new-rental saveRental="saveRental" city=model}}

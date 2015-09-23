@@ -2,10 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return Ember.RSVP.hash({
-      city: this.store.findRecord('city', params.city_id),
-      rentals: this.store.query('rental', { filter: { city: params.city_id } })
-    });
+    return this.store.findRecord('city', params.city_id);
   },
 
   actions: {
@@ -15,11 +12,11 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    saveRental(city, params) {
+    saveRental(params) {
       var newRental = this.store.createRecord('rental', params);
       newRental.save();
-      city.save();
-      this.transitionTo('index');
+      params.city.save();
+      this.transitionTo('city', params.city);
     },
 
     destroyCity(city) {
