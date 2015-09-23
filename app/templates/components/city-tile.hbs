@@ -1,8 +1,12 @@
-<li>{{city.name}}'s Attractions
-  <ul>
-    {{#each city.attractions as |attraction|}}
-      <li>{{attraction}}</li>
-    {{/each}}
-  </ul>
-  <button {{action 'destroyCity' city}}>Delete</button>
-</li>
+{{city.name}}'s Details
+<br>
+Country: {{city.country}}
+<hr>
+Rentals available in {{city.name}}:
+<ul>
+  {{#each rentals as |rental|}}
+    <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<button {{action 'destroyCity' city}}>Delete</button>
