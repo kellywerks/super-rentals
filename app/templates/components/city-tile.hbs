@@ -4,7 +4,7 @@ Country: {{city.country}}
 <hr>
 Rentals available in {{city.name}}:
 <ul>
-  {{#each rentals as |rental|}}
+  {{#each city.rentals as |rental|}}
     <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}}{{/link-to}}</li>
   {{/each}}
 </ul>
