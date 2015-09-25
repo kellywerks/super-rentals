@@ -19,6 +19,7 @@ export default Ember.Route.extend({
       newRental.save().then(function() {
         return city.save();
       });
+    alert(city.get('rentals'.length));
       this.transitionTo('city', params.city);
     },
 
