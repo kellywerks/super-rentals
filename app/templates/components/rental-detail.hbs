@@ -4,4 +4,5 @@ available by arrangement through {{rental.owner}}.
 <p>Renting on Super Rentals since: {{format-date rental.date_added}}</p>
 <p><img src={{rental.image}} alt={{rental.type}}></p>
 
-{{rental.date_added}}
+{{update-rental rental=rental updateRental="updateRental"}}
+<button {{action 'destroyRental' rental}}>Delete</button>
