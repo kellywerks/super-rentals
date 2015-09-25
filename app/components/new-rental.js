@@ -14,6 +14,8 @@ export default Ember.Component.extend({
         type: this.get('type'),
         image: this.get('image'),
         bedrooms: this.get('bedrooms'),
+        cost_per_night: 100,
+        date_added: Date.now()
       };
       this.set('addNewRental', false);
       this.sendAction('saveRental', params);
