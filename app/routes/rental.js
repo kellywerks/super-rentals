@@ -11,7 +11,9 @@ export default Ember.Route.extend({
           rental.set(key,params[key]);
         }
       });
+      debugger;
       rental.save();
+      alert(rental.owner);
     },
     destroyRental(rental) {
       rental.destroyRecord().then(function() {
